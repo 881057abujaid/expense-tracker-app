@@ -1,0 +1,328 @@
+/* Root selectot */
+:root {
+    --main-bg: #0b0b0b;
+    --secondary-bg: #111111;
+    --primary-text: #ffffff;
+    --secondary-text: #b5b5b5;
+    --muted-text: #7a7a7a;
+    --glass-card-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+/* Universal Style */
+* {
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Style */
+body {
+    min-height: 100%;
+    min-width: 100%;
+    background: var(--main-bg);
+    color: var(--primary-text);
+    scrollbar-width: none;
+}
+
+/* Main Container style */
+.container {
+    background: var(--secondary-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 15px;
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(6px);
+}
+
+/* Header Style */
+header {
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+header p {
+    text-transform: uppercase;
+}
+
+/* Dashboard Style */
+.dashboard {
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Dashboard Card style */
+.dashboard .card {
+    background: var(--glass-card-bg);
+    text-align: center;
+    flex: 1;
+    display: block;
+    padding: 15px;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+}
+
+/* Main Content Style */
+.main-content {
+    text-align: center;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 8px;
+    margin: 15px;
+    background-color: var(--glass-card-bg);
+    padding-top: 10px;
+    font-size: 1.2em;
+    backdrop-filter: blur(6px);
+}
+
+/* Form Section Style */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+
+.input-field {
+    flex: 1;
+    width: 100%;
+}
+
+.input-field:nth-child(1) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.input-field:nth-child(1) input {
+    flex: 0;
+}
+
+.input-field label,
+.input-field input,
+.input-field select {
+    width: 100%;
+    display: block;
+    text-align: left;
+    font-size: 1.2em;
+    margin: 5px auto;
+}
+
+.input-field label {
+    padding-left: 10px;
+}
+
+.input-field input,
+.input-field select {
+    background: var(--secondary-bg);
+    border: 1px solid var(--glass-border);
+    padding: 5px 10px;
+    color: var(--muted-text);
+    border-radius: 5px;
+    outline: none;
+    backdrop-filter: blur(6px);
+}
+
+input[type="submit"] {
+    color: black;
+    background: var(--primary-text);
+    box-shadow: 0 0 8px var(--primary-text);
+    margin-top: 25px;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+/* Submit Button Hover Effect */
+input[type="submit"]:hover {
+    transform: scale(0.98, 1.1);
+}
+
+/* Transaction History List Stye */
+.transactions {
+    background: var(--glass-card-bg);
+    margin: 15px;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 25px;
+    backdrop-filter: blur(6px);
+}
+
+/* Filter Button Style */
+.filter  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px auto;
+}
+
+.filter button {
+    flex: 1;
+    color: black;
+    background: var(--primary-text);
+    box-shadow: 0 0 8px var(--primary-text);
+    border: 1px solid var(--glass-border);
+    font-size: 1em;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+
+.filter button.active{
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* Filter Button Hover Effect */
+.filter button:hover {
+    transform: scale(0.95, 1.1);
+}
+
+/* Transaction Table Style */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: var(--glass-card-bg);
+    border-radius: 8px;
+}
+
+tr {
+    border-bottom: 1px solid var(--glass-border);
+}
+
+th {
+    padding: 5px;
+}
+
+tr td:nth-child(2),
+tr td:nth-child(3) {
+    width: 20%;
+    padding: 10px;
+}
+
+tr td:nth-child(1) {
+    text-align: left;
+    padding: 10px 25px;
+}
+
+/* Action Button Style */
+td:nth-child(3) button {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    padding: 5px;
+    color: var(--primary-text);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.edit-button {
+    background: rgb(71, 179, 71);
+    border: 2px solid var(--glass-border);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(71, 179, 71, 0.5);
+    transition: all 0.3s ease;
+}
+.delete-button {
+    background: rgb(255, 90, 90);
+    border: 2px solid var(--glass-border);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(255, 90, 90, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Action Button Hover Effect */
+td:nth-child(3) button:hover {
+    transform: scale(0.95, 1.01);
+}
+
+.edit-button:hover {
+    background: rgb(50, 118, 50);
+}
+
+.delete-button:hover {
+    background: rgb(161, 54, 54);
+}
+
+/* Insufficient Balance Message Top Up Style */
+.pop-up-message {
+    text-align: center;
+    background: var(--primary-text);
+    color: #0b0b0b;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    height: 200px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: var(--glass-shadow);
+    gap: 20px;
+}
+
+.pop-up-message button {
+    padding: 10px;
+    width: 40%;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #0b0b0b;
+}
+
+/* Edit Transaction Form Style */
+.edit-form {
+    display: none;
+    background: var(--primary-text);
+    color: #0b0b0b;
+    text-align: center;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.edit-form input[type="submit"] {
+    background: #0b0b0b;
+    color: #ffffff;
+    max-width: 50%;
+}
+
+/* Mobile Responsive Style */
+@media (max-width: 768px) {
+    .dashboard .card {
+        flex-basis: 48%;
+    }
+    .dashboard .card:nth-child(1) {
+        order: 3;
+    }
+    .dashboard .card:nth-child(4) {
+        order: 4;
+    }
+}

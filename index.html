@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker App</title>
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Logo Section-->
+        <header>
+            <h1>Smart Expense Tracker</h1>
+            <p>Manage your finance with ease</p>
+        </header>
+
+        <!-- Dashboard Section -->
+        <div class="dashboard">
+            <div class="card">
+                <h3>Balance</h3>
+                <h2>₹<span id="balance">0.00</span></h2>
+            </div>
+            <div class="card">
+                <h3>Total Expense</h3>
+                <h2>₹<span id="total-expense">0.00</span></h2>
+            </div>
+            <div class="card">
+                <h3>Total Income</h3>
+                <h2>₹<span id="total-income">0.00</span></h2>
+            </div>
+            <div class="card">
+                <h3>Total Enteries</h3>
+                <h2 id="total-enteries">0</h2>
+            </div>
+        </div>
+
+        <!-- Expense/Income Form Section -->
+        <section class="main-content">
+            <h2>Transaction Form</h2>
+            <div class="form-section">
+                <form id="transaction-form">
+                    <div class="input-field">
+                        <input type="radio" name="transaction-type" value="expense" checked>
+                        <label for="transaction-type">Expense</label>
+                        <input type="radio" name="transaction-type" value="income">
+                        <label for="transaction-type">Income</label>
+                    </div>
+                    <div class="input-field">
+                        <label for="category">Description</label>
+                        <select name="category" id="category">
+                            <option value="null">--- Select Category ---</option>
+                            <option value="Salary">Salary</option>
+                            <option value="Freelance">Freelance</option>
+                            <option value="Bill">Bill</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label for="amount">Amount</label>
+                        <input type="number" placeholder="0.00" id="amount">
+                    </div>
+                    <div class="input-field">
+                        <label for="date">Date</label>
+                        <input type="date" id="date">
+                    </div>
+                    <div class="input-field">
+                        <label for="remark">Remark</label>
+                        <input type="text" placeholder="e.g., Paid Bill" id="remark">
+                    </div>
+                    <div class="input-field">
+                        <input type="submit" value="Add Transaction">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Transaction History -->
+        <section class="transactions">
+            <h2>Transaction History</h2>
+            <div class="filter">
+                <button>All</button>
+                <button>Expense</button>
+                <button>Income</button>
+            </div>
+            <div class="transaction-list" id="transaction-list">No transactions found</div>
+        </section>
+    </div>
+    <div class="pop-up-message" id="pop-up">
+            <h2>Insufficient Balance in your Account!</h2>
+            <button id="removePopUp">Ok</button>
+    </div>
+    <div class="edit-form">
+        <h2>Edit Transaction</h2>
+        <form id="edit-form">
+            <div class="input-field">
+                <label for="category">Category</label>
+                <select name="category" id="edited-category">
+                    <option value="null">--- Select Category ---</option>
+                    <option value="Salary">Salary</option>
+                    <option value="Freelance">Freelance</option>
+                    <option value="Bill">Bill</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="amount">Amount</label>
+                <input type="number" placeholder="0.00" id="edited-amount">
+            </div>
+            <div class="input-field">
+                <label for="date">Date</label>
+                <input type="date" id="edited-date">
+            </div>
+            <div class="input-field">
+                <label for="remark">Remark</label>
+                <input type="text" placeholder="e.g., Paid Bill" id="edited-remark">
+            </div>
+            <div class="input-field">
+                <input type="submit" value="Save">
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
